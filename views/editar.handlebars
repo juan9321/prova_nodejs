@@ -1,0 +1,91 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-primary">
+            <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="/">Cadastrar</a>
+                            <a class="nav-link" href="/consulta">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+                {{#each post}}
+                {{#dataValues}}
+                        <form action="/atualizar" method="POST">
+                            <div class="mb-3 text-start">
+                                <input type="hidden" name="id" class="form-control" id="nome" value="{{id}}">
+                                <label class="form-label">Nome:</label>
+                                <input type="name" name="nome" class="form-control" id="nome" value="{{nome}}"> 
+                            </div>
+
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Endereco</label>
+                                <input type="name" name="endereco" class="form-control" id="endereco" aria-describedby="emailHelp" value="{{endereco}}">
+                            </div>
+
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Bairro</label>
+                                <input type="name" name="bairro" class="form-control" id="bairro" aria-describedby="emailHelp" value="{{bairro}}">
+                            </div>
+
+                                                        <div class="mb-3 text-start">
+                                <label class="form-label">Cep</label>
+                                <input type="name" name="cep" class="form-control" id="cep" aria-describedby="emailHelp" value="{{cep}}">
+                            </div>
+
+                                                                                    <div class="mb-3 text-start">
+                                <label class="form-label">cidade</label>
+                                <input type="name" name="cidade" class="form-control" id="cidade" aria-describedby="emailHelp" value="{{cidade}}">
+                            </div>
+
+                                                                                    <div class="mb-3 text-start">
+                                <label class="form-label">estado</label>
+                                <input type="name" name="estado" class="form-control" id="estado" aria-describedby="emailHelp" value="{{estado}}">
+                            </div>
+
+                   
+
+                            <div class="mb-3 text-start">
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                            </div>
+                        </form>
+                
+                {{/dataValues}}
+                 {{/each}}
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
